@@ -1,0 +1,26 @@
+version: '3'
+services:
+  docker:
+    image: varaprasad220/dockerservice
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+  jenkins:
+    image: varaprasad220/jenkinsservice
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 6
+  ansible:
+    image: varaprasad220/ansibleservice
+    ports:
+      - "83:80"
+    deploy:
+      replicas: 3
+  terraform:
+    image: varaprasad220/terraformservice
+    ports:
+      - "84:80"
+    deploy:
+      replicas: 4
