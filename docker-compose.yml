@@ -1,6 +1,6 @@
 version: '3'
 services:
-  docker:
+  dockerservice:
     image: varaprasad220/dockerservice
     ports:
       - "81:80"
@@ -21,6 +21,6 @@ services:
   terraform:
     image: varaprasad220/terraformservice
     ports:
-      - "84:80"
+      - "85:80"
     deploy:
       replicas: 4
